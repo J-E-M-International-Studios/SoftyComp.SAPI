@@ -76,6 +76,86 @@ namespace SoftyComp.SAPI
             return response.Data!;
         }
 
+
+        public async Task<PayByLinkResponse> CreateGatewayBillAsync(PayByLinkRequest requestModel)
+        {
+            var token = await GetTokenAsync();
+            var client = new RestClient(_baseUrl.Replace("/auth/generatetoken", ""));
+            var request = new RestRequest("cardpayments/creategatewaybill", Method.Post);
+            request.AddHeader("Authorization", $"Bearer {token}");
+            request.AddHeader("Content-Type", "application/json");
+            request.AddJsonBody(requestModel);
+
+            var response = await client.ExecuteAsync<PayByLinkResponse>(request);
+            if (!response.IsSuccessful)
+                throw new Exception($"Gateway Bill creation failed: {response.Content}");
+
+            return response.Data!;
+        }
+
+        public async Task<PayByLinkResponse> CreateWebsiteBillAsync(PayByLinkRequest requestModel)
+        {
+            var token = await GetTokenAsync();
+            var client = new RestClient(_baseUrl.Replace("/auth/generatetoken", ""));
+            var request = new RestRequest("cardpayments/createwebsitebill", Method.Post);
+            request.AddHeader("Authorization", $"Bearer {token}");
+            request.AddHeader("Content-Type", "application/json");
+            request.AddJsonBody(requestModel);
+
+            var response = await client.ExecuteAsync<PayByLinkResponse>(request);
+            if (!response.IsSuccessful)
+                throw new Exception($"Website Bill creation failed: {response.Content}");
+
+            return response.Data!;
+        }
+
+        public async Task<PayByLinkResponse> CreatePluginBillAsync(PayByLinkRequest requestModel)
+        {
+            var token = await GetTokenAsync();
+            var client = new RestClient(_baseUrl.Replace("/auth/generatetoken", ""));
+            var request = new RestRequest("cardpayments/createpluginbill", Method.Post);
+            request.AddHeader("Authorization", $"Bearer {token}");
+            request.AddHeader("Content-Type", "application/json");
+            request.AddJsonBody(requestModel);
+
+            var response = await client.ExecuteAsync<PayByLinkResponse>(request);
+            if (!response.IsSuccessful)
+                throw new Exception($"Plugin Bill creation failed: {response.Content}");
+
+            return response.Data!;
+        }
+
+        public async Task<List<TransactionRecord>> GetReconciledRecordsAsync(string fromDate, string toDate)
+        {
+            var token = await GetTokenAsync();
+            var request = new RestRequest($"cardpayments/listReconSuccessfulRecords/{fromDate}/{toDate}", Method.Get);
+            request.AddHeader("Authorization", $"Bearer {token}");
+            var client = new RestClient(_baseUrl.Replace("/auth/generatetoken", ""));
+            var response = await client.ExecuteAsync<List<TransactionRecord>>(request);
+            return response.Data ?? new List<TransactionRecord>();
+        }
+
+        public async Task<List<TransactionRecord>> GetPendingReconciliationsAsync()
+        {
+            var token = await GetTokenAsync();
+            var request = new RestRequest("cardpayments/listReconPendingRecords", Method.Get);
+            request.AddHeader("Authorization", $"Bearer {token}");
+            var client = new RestClient(_baseUrl.Replace("/auth/generatetoken", ""));
+            var response = await client.ExecuteAsync<List<TransactionRecord>>(request);
+            return response.Data ?? new List<TransactionRecord>();
+        }
+
+        public async Task<List<TransactionRecord>> GetTransactionsByDateRangeAsync(string fromDate, string toDate)
+        {
+            var token = await GetTokenAsync();
+            var request = new RestRequest($"cardpayments/listtransactionsbydateRange/{fromDate}/{toDate}", Method.Get);
+            request.AddHeader("Authorization", $"Bearer {token}");
+            var client = new RestClient(_baseUrl.Replace("/auth/generatetoken", ""));
+            var response = await client.ExecuteAsync<List<TransactionRecord>>(request);
+            return response.Data ?? new List<TransactionRecord>();
+        }
+
+
         public async Task<CdvResponse> ValidateBankDetailsAsync(CdvRequest requestModel)
         {
             var token = await GetTokenAsync();

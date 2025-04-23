@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SoftyComp.SAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+434496c02244e2d43f7fbacb855fb7873127fcf3")]
 [assembly: System.Reflection.AssemblyProductAttribute("SoftyComp.SAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SoftyComp.SAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

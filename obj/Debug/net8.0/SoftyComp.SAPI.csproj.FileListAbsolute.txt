@@ -1,0 +1,12 @@
+C:\Users\eonvw\source\repos\SoftyComp.SAPI\SoftyComp.SAPI\bin\Debug\net8.0\SoftyComp.SAPI.deps.json
+C:\Users\eonvw\source\repos\SoftyComp.SAPI\SoftyComp.SAPI\bin\Debug\net8.0\SoftyComp.SAPI.dll
+C:\Users\eonvw\source\repos\SoftyComp.SAPI\SoftyComp.SAPI\bin\Debug\net8.0\SoftyComp.SAPI.pdb
+C:\Users\eonvw\source\repos\SoftyComp.SAPI\SoftyComp.SAPI\obj\Debug\net8.0\SoftyComp.SAPI.csproj.AssemblyReference.cache
+C:\Users\eonvw\source\repos\SoftyComp.SAPI\SoftyComp.SAPI\obj\Debug\net8.0\SoftyComp.SAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eonvw\source\repos\SoftyComp.SAPI\SoftyComp.SAPI\obj\Debug\net8.0\SoftyComp.SAPI.AssemblyInfoInputs.cache
+C:\Users\eonvw\source\repos\SoftyComp.SAPI\SoftyComp.SAPI\obj\Debug\net8.0\SoftyComp.SAPI.AssemblyInfo.cs
+C:\Users\eonvw\source\repos\SoftyComp.SAPI\SoftyComp.SAPI\obj\Debug\net8.0\SoftyComp.SAPI.csproj.CoreCompileInputs.cache
+C:\Users\eonvw\source\repos\SoftyComp.SAPI\SoftyComp.SAPI\obj\Debug\net8.0\SoftyComp.SAPI.dll
+C:\Users\eonvw\source\repos\SoftyComp.SAPI\SoftyComp.SAPI\obj\Debug\net8.0\refint\SoftyComp.SAPI.dll
+C:\Users\eonvw\source\repos\SoftyComp.SAPI\SoftyComp.SAPI\obj\Debug\net8.0\SoftyComp.SAPI.pdb
+C:\Users\eonvw\source\repos\SoftyComp.SAPI\SoftyComp.SAPI\obj\Debug\net8.0\ref\SoftyComp.SAPI.dll
